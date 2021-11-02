@@ -44,7 +44,7 @@ Widget type will be a type property, and widget's properties will be the json pr
 Add this to your package's pubspec.yaml file:
 ```
 dependencies:
-  dynamic_widget: ^3.0.3
+  dynamic_widget: ^4.0.3
 ```
 
 #### 2. Install it
@@ -98,7 +98,7 @@ class PreviewPage extends StatelessWidget {
   }
 
   Future<Widget> _buildWidget(BuildContext context) async {
-    return DynamicWidgetBuilder.build(jsonString, context, new DefaultClickListener());
+    return DynamicWidgetBuilder.build(jsonString, context, DefaultClickListener());
   }
 }
 ```
@@ -195,8 +195,7 @@ class DefaultClickListener implements ClickListener{
 Finally, pass the listener to build method.
 ```dart
   Future<Widget> _buildWidget() async{
-
-    return DynamicWidgetBuilder.build(jsonString, buildContext, new DefaultClickListener());
+    return DynamicWidgetBuilder.build(jsonString, buildContext, DefaultClickListener());
   }
 ```
 
